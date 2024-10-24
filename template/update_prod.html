@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADD PRODUCTS</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{prod.product_name}}"><br><br>
+        <label for="des">Description:</label>
+        <input type="text" name="des" value="{{prod.product_description}}"><br><br>
+        <label for="price">Price:</label>
+        <input type="text"name="price" value="{{prod.product_price}}">
+        <label for="quantity">Stock Quantity</label>
+        <input type="text"name="quantity" value="{{prod.stock_quantity}}"><br><br>
+        <button type="submit">update</button>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> EVENT DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>Event_id</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Organizer</th>
+            <th>Update</th>
+            <th>Delete</th>
+            
+            
+
+        
+        </tr>
+        {% for x in e %}
+        <tr>
+            <td>{{x.Event_id    }}</td>
+            <td>{{x.Title}}</td>
+            <td>{{x.Date}}</td>
+            <td>{{x.Location}}</td>
+            <td>{{x.organizer}}</td>
+            
+            
+
+            
+        </tr>
+        {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ORGANIZER DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact_Email</th>
+            <th>Phone Number</th>
+            
+
+        
+        </tr>
+        {% for x in o %}
+        <tr>
+            <td>{{x.ID}}</td>
+            <td>{{x.Name}}</td>
+            <td>{{x.Contact_email}}</td>
+            <td>{{x.Phone_number}}</td>
+            
+
+            
+        </tr>
+        {% endfor %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADD PRODUCTS</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="id">PRODUCT_ID</label>
+        <input type="text" name="id"><br><br>
+        <label for="name">PRODUCT_NAME</label>
+        <input type="text" name="name"><br><br>
+        <label for="">USER</label>
+        <select name="user_id">
+            {% for i in udata %}
+            <option value="{{i.user_id}}">{{i.user_name}}</option>
+            {% endfor %}
+        </select>
+
+
+        
+        <button type="submit">ADD</button>
+
+    </form>
+    
+</body>
+</html>

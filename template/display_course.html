@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> COURSE DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>course_name</th>
+            <th>course_code</th>
+            <th>Date</th>
+            
+
+        
+        </tr>
+        {% for x in c %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.course_name}}</td>
+            <td>{{x.course_code}}</td>
+            <td>{{x.Date}}</td>
+            
+
+            
+        </tr>
+        {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}                     
+        <label for="Event_id">Event ID</label>
+        <input type="text"name="Event_id"required><br><br>
+
+        <label for="Title">Title</label>
+        <input type="text"name="Title"required><br><br>
+
+        <label for="Date">Date</label>
+        <input type="text"name="Date"required><br><br>
+
+        <label for="Locationr">Location</label>
+        <input type="text"name="Location"required><br><br>
+        <label for="org">Organizer</label>
+        <select name="org">
+            {% for x in org_list %}
+            <option value="{{x.id}}">{{x.name}}</option>
+            {% endfor %}
+
+        
+        <button type="submit">ADD</button>
+    </form>
+</body>
+</html>

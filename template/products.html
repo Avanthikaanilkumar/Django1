@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul>
+        {% for i in item %}
+        <li><b>{{i.name}}</b></li>
+        <ul style="list-style-type:none;padding-left:0;">
+        <li>Price: {{i.price}}</li>
+        {% if i.stock == 'Out ofstock' %}
+        <li style="color: red;">Out ofstock</li>
+        {% else %}
+        <li style="color: rgb(60, 175, 81);">Instock</li>
+        {% endif %}
+        </ul>
+        {% endfor %}                                                                                                                                           
+    </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> PUBLISHER DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+
+        
+        </tr>
+        {% for x in p1 %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.pu_name}}</td>
+            <td>{{x.pu_address}}</td>
+            <td>{{x.pu_email}}</td>
+            <td><a href="{% url 'update_publisherr' x.id %}">Update</a></td>
+            <td><a href="{% url 'delete_publisherr' x.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+</body>
+</html>

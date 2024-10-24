@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> STUDENT DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>First_name</th>
+            <th>Last_name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Full Details</th>
+            <th>Update</th>
+            <th>Delete</th>
+            
+
+        
+        </tr>
+        {% for x in s %}
+        <tr>
+            
+            <td>{{x.first_name}}</td>
+            <td>{{x.last_name}}</td>
+            <td>{{x.Email}}</td>
+            <td>{{x.phone_number}}</td>
+            <td><a href="{% url 'zss' x.id %}">Display</a></td>
+            
+            <td><a href="{% url 'updateStudent' x.id %}">Update</a></td>
+            <td><a href="{% url 'deleteStudent' x.id %}">Delete</a></td>
+        </tr>
+
+            
+
+            
+        </tr>
+        {% endfor %}
+</body>
+</html>

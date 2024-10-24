@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> PRODUCT DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>PRODUCT NAME</th>
+            <th>USER NAME</th>
+        
+        </tr>
+        {% for x in u1 %}
+        <tr>
+            <td>{{x.p_id}}</td>
+            <td>{{x.p_name}}</td>
+            <td>{{x.up_name}}</td>
+        </tr>
+        {% endfor %}
+</body>
+</html>
